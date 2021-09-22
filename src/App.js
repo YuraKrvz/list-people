@@ -4,12 +4,16 @@ import store from './store/store';
 import './App.css';
 
 import PeopleList from './components/PeopleList';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <Provider store={store}>
-      <PeopleList />
-    </Provider>
+    <div style={{position: 'relative'}}>
+      <Provider store={store}>
+        <Navbar />
+        <PeopleList />
+      </Provider>
+    </div>
   );
 }
 

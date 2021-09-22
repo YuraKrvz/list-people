@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import { add_list, add_person } from '../../store/actions';
+import { add_list, delete_person } from '../../store/actions';
+import DeleteModal from '../DeleteModal';
+import DefaultModal from '../DefaultModal';
 
 const PeopleList = ()=> {
   const listPeople = useSelector(state => state.listPeopleReducer);
@@ -19,11 +21,9 @@ const PeopleList = ()=> {
          {listPeople.listPeople.map(item => {
            return <li key={item.id}>
            Name:{item.name}, e-mail:{item.email}, website:{item.website}, company:{item.company.name}
-           <div>
-            <button>Edit</button>
-            <button>Delete</button>
-            <button>Add</button>
-           </div>
+          
+           <DefaultModal person={item} header="Edit" />
+           <DeleteModal person={item} />
            </li>
          } )}
       </ul>

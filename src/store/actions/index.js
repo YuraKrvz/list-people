@@ -1,4 +1,4 @@
-import { ADD_LIST, ADD_PERSON } from "../constants/actionTypes";
+import { ADD_LIST, ADD_PERSON, DELETE_PERSON } from "../constants/actionTypes";
 
 export const add_list = (obj) => ({
    type: ADD_LIST,
@@ -10,6 +10,10 @@ export const add_person = (obj) => ({
    payload: obj,
 });
 
+export const delete_person = (obj)=>({
+   type: DELETE_PERSON,
+   payload: obj.id,
+});
 
 
 
