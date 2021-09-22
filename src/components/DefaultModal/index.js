@@ -2,24 +2,24 @@ import React, {useState, useEffect} from 'react';
 import {Button} from '../ElementsButtons';
 import {WrapperModal, BodyModal, Input} from './ElementsDefaultModal';
 
-import {add_person} from '../../store/actions';
-import {useSelector, useDispatch} from 'react-redux';
+import {edit_person} from '../../store/actions';
+import {/*useSelector,*/ useDispatch} from 'react-redux';
 
 const DefaultModal = ({children, header, person})=> {
   const [showModal, setShowModal] = useState(false);
   const [valueInput, setValueInput] = useState({name: person.name, email: person.email, website: person.website, company: {name: person.company.name}});
   const dispatch = useDispatch();
-  const listPeople = useSelector(state => state.listPeopleReducer);
+//   const listPeople = useSelector(state => state.listPeopleReducer);
 
   const handlerInput = ()=>{
-   dispatch(add_person({
+   dispatch(edit_person({
       ...valueInput, 
-      id: `${listPeople.listPeople.length + 1}`,
+      id: `${person.id}`,
    }))
 }
-useEffect(()=>{
-   console.log('use effect')
-}, [])
+// useEffect(()=>{
+//    console.log('use effect')
+// }, [])
 
   return (
     <>
@@ -36,7 +36,7 @@ useEffect(()=>{
 
                <div>
                   <button onClick={()=> console.log(valueInput)}>show</button>
-                  <Button onClick={handlerInput}>Add</Button>
+                  <Button onClick={handlerInput}>{header}</Button>
                   <Button onClick={()=> setShowModal(false)}>close</Button>
                </div>
             </BodyModal>

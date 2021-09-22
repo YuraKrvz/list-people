@@ -1,19 +1,14 @@
-import React, {useState} from 'react';
-import {Button} from '../ElementsButtons';
-import {WrapperNavbar, Input, } from './ElementsNavbar';
+import React from 'react';
+// import Navbar from 'react-bootstrap/Navbar'
+import Addition from '../Addition';
 
-
-import Modal from '../AddModal/index';
-
-const Navbar = ()=> {
-  
-
-
-   
+const Navbar = ({children})=> {
   return (
-    <WrapperNavbar>
-    <Modal /> 
-    </WrapperNavbar>
+    <div>
+      
+      
+      <Addition /> 
+    </div>
   );
 }
 

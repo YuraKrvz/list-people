@@ -22,9 +22,13 @@ const listPeopleReducer = (state = initialState, action)=>{
             listPeople: state.listPeople.filter(item => item.id !== action.payload),
          }   
       case EDIT_PERSON:
+         const index = state.listPeople.findIndex(item => item.id == action.payload.id)
+         if(index >= 0){
+            state.listPeople[index] = action.payload;
+         }
          return {
             ...state,
-            listPeople: state.listPeople.find(item => item.id == action.payload)
+            listPeople: [...state.listPeople]
          };
         default: return state; 
    }
