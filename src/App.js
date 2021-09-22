@@ -9,13 +9,20 @@ import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <Container className="bg-light d-flex justify-content-center">
+
       <Provider store={store}>
-          <Navbar />
-          <PeopleList />
+      <Container>
+      
+        <Navbar /> 
+        <div className="bg-light d-flex justify-content-center">
+        
+        <PeopleList />
+        </div>
+      </Container>
+          
         
       </Provider>
-    </Container>
+
   );
 }
 

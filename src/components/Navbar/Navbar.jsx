@@ -1,15 +1,33 @@
 import React from 'react';
-// import Navbar from 'react-bootstrap/Navbar'
+import NavbarBootstrap from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav'
 import Addition from '../Addition';
 
 const Navbar = ({children})=> {
+
   return (
-    <div>
-      
-      
+    <>
+    <NavbarBootstrap bg="dark" variant="dark">
+    <Container>
+    <NavbarBootstrap.Brand href="#home">List test work</NavbarBootstrap.Brand>
+    <Nav className="me-center">
+
       <Addition /> 
-    </div>
-  );
+    </Nav>
+    </Container>
+  </NavbarBootstrap>
+
+    </>
+  )
+
+  // return (
+  //   <div>
+      
+      
+  //     <Addition /> 
+  //   </div>
+  // );
 }
 
 export default Navbar;
