@@ -28,7 +28,7 @@ const PeopleList = ()=> {
              <ListGroup.Item className="bg-light">e-mail: {item.email}</ListGroup.Item>   
              <ListGroup.Item className="bg-light">website: {item.website}</ListGroup.Item>   
              <ListGroup.Item className="bg-light">company: {item.company.name}</ListGroup.Item>  
-             {item.changed ? <ListGroup.Item className="text-danger">was changed <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span></ListGroup.Item>  : null}   
+             {item.changed ? <ListGroup.Item className="text-danger">was changed <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span></ListGroup.Item>  : null}   
            </ListGroup>
 
            
