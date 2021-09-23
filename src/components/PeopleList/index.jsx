@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
-
-
 import {useSelector, useDispatch} from 'react-redux';
 import {add_list} from '../../store/actions';
 import Editing from '../Editing';

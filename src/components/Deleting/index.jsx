@@ -6,8 +6,6 @@ import { delete_person } from '../../store/actions';
 const Deleting = ({item})=> {
    const dispatch = useDispatch();
    const handlerDelete = ()=> dispatch(delete_person(item));
-   // const handlerDelete = ()=> console.log('del');
-   ;
    
   return (
     <>
