@@ -14,7 +14,7 @@ const PeopleList = ()=> {
       .then(res => res.json())
       .then(res => dispatch(add_list(res)))
    }, [])
-   console.log(listPeople);
+  //  console.log(listPeople);
    
   return (
     <div >
